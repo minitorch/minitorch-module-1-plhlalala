@@ -154,7 +154,7 @@ class Scalar:
         if self.derivative is None:
             self.derivative = 0.0
         self.derivative += x
-        #print(f"Accumulated derivative {self.derivative} for {self.name}")
+        # print(f"Accumulated derivative {self.derivative} for {self.name}")
 
     def is_leaf(self) -> bool:
         "True if this variable created by the user (no `last_fn`)"

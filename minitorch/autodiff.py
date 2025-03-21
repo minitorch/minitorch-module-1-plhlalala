@@ -77,7 +77,7 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
         if n.unique_id in PermanentMarked:
             return
         elif n.unique_id in TemporaryMarked:
-            raise(RuntimeError("Not a DAG"))
+            raise (RuntimeError("Not a DAG"))
 
         TemporaryMarked.append(n.unique_id)
 
@@ -88,7 +88,7 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
                 visit(input)
         TemporaryMarked.remove(n.unique_id)
         PermanentMarked.append(n.unique_id)
-        result.insert(0,n)
+        result.insert(0, n)
 
     visit(variable)
 
